@@ -10,6 +10,7 @@ pub extern "C" fn _start() -> ! {
 }
 
 /// This function called on panic
+#[cfg(not(test))]
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
